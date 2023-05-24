@@ -1,0 +1,51 @@
+Tera-Contact v1.7 [by Brick Briceño]
+
+La utilidad de este maravilloso programa se dá Cuándo se utiliza para extraer información relevante de páginas web Como por ejemplo contactos nombres de negocios direcciones y números telefónicos
+
+Es algo que cualquier persona puede hacer pero este programa tiene una estruendosa superioridad en cuanto a velocidad
+
+Como usar:
+*lo mejor está al final*
+
+Con la "Q" se puede cambiar de pestaña rápidamente
+
+Con la letra "O" vas a la pagina anterior, con la "P" la siguente
+
+Con la "C" Copias los datos de la tabla al portapapeles
+Puedes pegar la tabla en las hojas de datos de google sheets
+Solo selecionas la primera celda, pegar y listo! :D
+
+¿quieres saber cuánto tiempo llevas pegando contactos? Preciona "T"
+susurro: También te dice Cuantos Contactos Haces por Minuto ;)
+
+¿Qué pasa? si siento que hay un contacto que puse 2 veces??? Presiona "S"
+te llevará a la fila donde está el detalle y de dirá en qué filas y columnas el texto se repite jeje
+
+Si necesitas guadar los datos como un documento excel .xlsx Presiona "Ctrl+S"
+de todos modos cada 40 segundos se guarda una copia, y un segundo despues de esto guarda una 2da copia
+esto por si hay un apagon electrico, o corpoelec te falla, o el lago guri se seca :)
+
+Para cerrar con broche de oro está la función <magia> Así es, se llama magia, por que hace magia
+
+Para tomar los datos de la página web Solo tienes que seleccionar el texto que quieres copiar
+dandole doble click si quieres tomar una palabra por ejemplo
+o triple click si quieres tomar el Texo Comleto
+
+Presiona "A" y te pondrá el texto en la primera celda de la primera columna supongamos qué copias el nombre del negocio en Google Maps
+Pues el programa te limpiara los espacios que esten al principio y al final del texto, tambien los saltos de linea y te lo pondrá en la primera celda
+o si acaso presionaste otra celda te lo pondrá ahi, sea cual sea el caso NO TIENES QUE DEVOLVERTE A VER LA PESTAÑA DE CONTACTOS, no pierdas tiempo
+si vuelves a presionar "A" el texto lo pondrá en la celda de al lado, a la derecha
+
+1. Sí lo pones en la pestaña Nombres te pegara el texto como tal
+
+2. Sí lo pones en la pestaña Dirección te quitaran los 11 primeros caracteres o sea que
+si estás copiando los de Google Maps <dirección 2 puntos y un espacio> pues ahí están los 11 caracteres
+que te va a quitar, dejarás solamente la dirección limpia
+
+3. sí lo ponen en la tercera columna o sea el número de teléfono Solo te dejará los números comparados separados por espacios
+
+Como puedes ver este programa hace que ahorre muchas horas al dia para dedicarlo a otra cosa
+a parte de esto es muy pesado el hacerlo de la otra manera
+
+No olvideas apoyar al creador del programa :D
+Tiene una gata que alimentar (＾• ω •＾)
