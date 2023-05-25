@@ -7,25 +7,28 @@ Es algo que cualquier persona puede hacer pero este programa tiene una estruendo
 Como usar:
 *lo mejor está al final*
 
-Con la "Q" se puede cambiar de pestaña rápidamente
+Con "Ctrl+Q" se puede cambiar de pestaña rápidamente
 
-Con la letra "O" vas a la pagina anterior, con la "P" la siguente
+Con la letra "Ctrl+O" vas a la pagina anterior, con "Ctrl+P" la siguente
+en caso de que cierres el programa la actual url actual se guarda
+en un documento de texto al lado del programa, este cuando lo vuelvas a abrir
+cargará la url almacenada en este
 
-Con la "C" Copias los datos de la tabla al portapapeles
+Con "Ctrl+C" Copias los datos de la tabla al portapapeles
 Puedes pegar la tabla en las hojas de datos de google sheets
 Solo selecionas la primera celda, pegar y listo! :D
 
 ¿quieres saber cuánto tiempo llevas pegando contactos? Preciona "T"
 susurro: También te dice Cuantos Contactos Haces por Minuto ;)
 
-¿Qué pasa? si siento que hay un contacto que puse 2 veces??? Presiona "S"
+¿Qué pasa? si siento que hay un contacto que puse 2 veces??? Presiona "Ctrl+R"
 te llevará a la fila donde está el detalle y de dirá en qué filas y columnas el texto se repite jeje
 
 Si necesitas guadar los datos como un documento excel .xlsx Presiona "Ctrl+S"
 de todos modos cada 40 segundos se guarda una copia, y un segundo despues de esto guarda una 2da copia
 esto por si hay un apagon electrico, o corpoelec te falla, o el lago guri se seca :)
 
-Para cerrar con broche de oro está la función <magia> Así es, se llama magia, por que hace magia
+Para cerrar con broche de oro está la función <Magia> Así es, se llama magia, por que hace magia
 
 Para tomar los datos de la página web Solo tienes que seleccionar el texto que quieres copiar
 dandole doble click si quieres tomar una palabra por ejemplo
@@ -48,4 +51,4 @@ Como puedes ver este programa hace que ahorre muchas horas al dia para dedicarlo
 a parte de esto es muy pesado el hacerlo de la otra manera
 
 No olvideas apoyar al creador del programa :D
-Tiene una gata que alimentar (＾• ω •＾)
+Tiene una gatica que alimentar (＾• ω •＾)
