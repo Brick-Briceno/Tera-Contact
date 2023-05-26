@@ -5,58 +5,12 @@ El objetivo de este programa es facilitar
 la recolección de nombres, telefonos y direcciones
 """
 
-"Ventana de carga"
-
-import time
-import tkinter as tk
-from threading import Thread
-from tkinter import ttk
-
-def simulate_loading():
-    for i in range(1000):
-        progress_bar['value'] = i/10
-        progress_bar.update()
-        delay = 0.0000001 * i ** 2 #Cálculo del retraso exponencial
-        time.sleep(delay)
-
-def create_loading_window():
-    global loading_window
-    loading_window = tk.Tk()
-    loading_window.overrideredirect(True)
-    loading_window.geometry("300x120")
-    loading_window.resizable(False, False)
-    loading_window.configure(bg='gray25')
-    loading_window.geometry("+{}+{}".format(int(loading_window.winfo_screenwidth() / 2 - loading_window.winfo_reqwidth() / 2), int(loading_window.winfo_screenheight() / 2 - loading_window.winfo_reqheight() / 2)))
-    label = ttk.Label(loading_window, text="Tera-Contact 1.7", font=("Arial", 16), foreground="white", background="gray25")
-    label.pack(pady=10)
-
-    global progress_bar
-    progress_bar = ttk.Progressbar(loading_window, length=280, mode="determinate", style="Custom.Horizontal.TProgressbar")
-    progress_bar.pack(pady=10)
-
-    loading_window.style = ttk.Style()
-    loading_window.style.theme_use("clam")
-    loading_window.style.configure("Custom.Horizontal.TProgressbar",
-                                    troughcolor='gray50',
-                                    background='dodger blue',
-                                    bordercolor='gray25',
-                                    lightcolor='dodger blue',
-                                    darkcolor='dodger blue')
-
-    Thread(target=simulate_loading).start()
-
-    loading_window.mainloop()
-
-Thread(target=create_loading_window).start()
-
-"Programa"
-
 from PyQt5.QtCore import QUrl, Qt
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QWidget, QVBoxLayout, QTableWidget, QShortcut, QTableWidgetItem, QHeaderView, QLineEdit, QMessageBox
 from tkinter import filedialog as FileDialog
 from PyQt5.QtGui import QKeySequence
-#from threading import Thread
+from threading import Thread
 import qdarkstyle
 import xlsxwriter
 import pandas as pd
@@ -349,7 +303,6 @@ QShortcut(QKeySequence("Ctrl+T"), window).activated.connect(mostrar_cronometro)
 QShortcut(QKeySequence("Ctrl+R"), window).activated.connect(lambda: mostrar_mensaje(ver_if_hay_repeticion()))
 QShortcut(QKeySequence("Ctrl+S"), window).activated.connect(guardar_como)
 
-loading_window.destroy()
 
 window.showMaximized()
 window.show()
