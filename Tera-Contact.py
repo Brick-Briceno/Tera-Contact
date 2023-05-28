@@ -48,7 +48,8 @@ def export_table_to_excel(nombre_archivo):
 def guardar_como():
     fichero = FileDialog.asksaveasfile(title="Guardar Hoja de Excel", 
             mode="w", defaultextension=".xlsx")
-    export_table_to_excel(fichero.name)
+    if fichero != None:
+        export_table_to_excel(fichero.name)
 
 
 guardado_activado = True
@@ -149,32 +150,43 @@ def cantidad_de_contactos():
             n += 1
     return n
 
-def magia():
-    global magia_posicion
-    selected_text = webview.page().selectedText()
-    selected_text = limpiar_espacios(selected_text)
-    #Limpiar texto dependiendo del tipo de dato
-    if magia_posicion[1] == 1:
-        selected_text = selected_text[11:]
-    
-    elif magia_posicion[1] == 2:
-        selected_text = filtrar_numeros_y_espacios(selected_text)
 
-    table.setItem(magia_posicion[0],
-                  magia_posicion[1], QTableWidgetItem(selected_text))
+def magia2():
+    nom = False
+    dire = False
+    tele = False
+    global magia_posicion
+    texto = webview.page().selectedText()
+    for x in texto.splitlines():
+        if x != "" and not nom:
+            nom = True
+            table.setItem(magia_posicion[0],
+                  0, QTableWidgetItem(
+                    limpiar_espacios(x)))
+
+        elif "España" in x and not dire:
+            dire = True
+            table.setItem(magia_posicion[0],
+                  1, QTableWidgetItem(
+                    limpiar_espacios(x)))
+
+        elif "+34"  in x and not tele:
+            tele = True
+            table.setItem(magia_posicion[0],
+                  2, QTableWidgetItem(
+                    limpiar_espacios(x)[1:]))
+
+    if not(nom * dire * tele):
+        mostrar_mensaje("Faltan datos para el contacto")
 
     scrollbar.setValue(magia_posicion[0]-7)
-    print(magia_posicion)
-    magia_posicion[1] += 1
-    if magia_posicion[1] > 2:
-        magia_posicion[1] = 0
-        magia_posicion[0] += 1
+    magia_posicion[0] += 1
 
 app = QApplication([])
 app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
 
 window = QMainWindow()
-window.setWindowTitle("Tera-Contact v1.2 [by Brick Briceño]")
+window.setWindowTitle("Tera-Contact v1.7 [by Brick Briceño]")
 
 central_widget = QWidget(window)
 layout = QVBoxLayout(central_widget)
@@ -231,22 +243,39 @@ def mostrar_mensaje(texto):
     mensaje.setText(texto)
     mensaje.exec_()
 
+def mostrar_tiempo(tiempo_pasado):
+    segundos = int(tiempo_pasado % 60)
+    minutos = int(tiempo_pasado/60)
+    horas = int(tiempo_pasado/3600)
+
+    if horas:
+        if minutos == 0 and segundos == 0:
+            return f"{horas}H"
+        elif minutos == 0:
+            return f"{horas}H {segundos}S"
+        else:
+            return f"{horas}H {minutos}M"
+    elif minutos:
+        if segundos == 0:
+            return f"{minutos}M"
+        else:
+            return f"{minutos}M {segundos}S"
+    else:
+        return f"{segundos}S"
 
 start_time = time.time()
 def mostrar_cronometro():
-    elapsed_time = time.time() - start_time
-    horas = int(elapsed_time // 3600)
-    minutos = int((elapsed_time % 3600) // 60)
-    segundos = int(elapsed_time % 60)
+    tiempo_pasado = time.time() - start_time
+    segundos = int(tiempo_pasado)
+    minutos = int(tiempo_pasado/60)
+    horas = int(tiempo_pasado/3600)
 
-    tiempo = str(horas) + "H " + str(minutos) + "M"
-    if segundos < 3600:
-        tiempo = str(minutos) + "M " + str(segundos) + "S"
-    if segundos < 60:
-        tiempo = str(segundos) + "S"
+    tiempo = mostrar_tiempo(tiempo_pasado)
 
-    mostrar_mensaje("Tiempo transcurrido: " + tiempo + "\nhaces "
-                    + str(cantidad_de_contactos()/segundos*60)[:4] + " contactos en promedio")
+    cts = cantidad_de_contactos()
+    mostrar_mensaje(f"Tiempo transcurrido: {tiempo}\nHay {cts} Contactos\nHaces " +
+                    f"{cts/segundos*60:.{2}f} contactos por minuto\n{int(cts/segundos*3600)} por Hora")
+
 
 line_edit = QLineEdit()
 line_edit.setPlaceholderText("Pon la Url :D")
@@ -278,7 +307,6 @@ window.setCentralWidget(tab_widget)
 
 clipboard = QApplication.clipboard()
 def copiar_tabla():
-    print(webview.toHtml())
     texto = ""
     for linea in range(5000):
         for colum in range(3):
@@ -291,10 +319,9 @@ def copiar_tabla():
     clipboard.setText(texto)
 
 
-
 "Atajos de teclado"
 
-QShortcut(QKeySequence("A"), window).activated.connect(magia)
+QShortcut(QKeySequence("A"), window).activated.connect(magia2)
 QShortcut(QKeySequence("Ctrl+Q"), window).activated.connect(cambiar_pestana)
 QShortcut(QKeySequence("Ctrl+O"), window).activated.connect(lambda: webview.back())
 QShortcut(QKeySequence("Ctrl+P"), window).activated.connect(lambda: webview.forward())
