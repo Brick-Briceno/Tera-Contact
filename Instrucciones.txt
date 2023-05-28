@@ -7,21 +7,18 @@ Es algo que cualquier persona puede hacer pero este programa tiene una estruendo
 Como usar:
 *lo mejor está al final*
 
-Con "Ctrl+Q" se puede cambiar de pestaña rápidamente
+Con la "Ctrl+Q" se puede cambiar de pestaña rápidamente
 
-Con la letra "Ctrl+O" vas a la pagina anterior, con "Ctrl+P" la siguente
-en caso de que cierres el programa la actual url actual se guarda
-en un documento de texto al lado del programa, este cuando lo vuelvas a abrir
-cargará la url almacenada en este
+Con la letra "Ctrl+O" vas a la pagina anterior, con la "Ctrl+P" la siguente
 
-Con "Ctrl+C" Copias los datos de la tabla al portapapeles
+Con la "Ctrl+C" Copias los datos de la tabla al portapapeles
 Puedes pegar la tabla en las hojas de datos de google sheets
 Solo selecionas la primera celda, pegar y listo! :D
 
-¿quieres saber cuánto tiempo llevas pegando contactos? Preciona "T"
-susurro: También te dice Cuantos Contactos Haces por Minuto ;)
+¿quieres saber cuánto tiempo llevas haciendo contactos? Preciona "Ctrl+T"
+susurro: También te dice Cuantos Contactos Haces por Minuto y por ahora ;)
 
-¿Qué pasa? si siento que hay un contacto que puse 2 veces??? Presiona "Ctrl+R"
+¿Qué pasa si siento que hay un contacto que puse 2 veces??? Presiona "Ctrl+R"
 te llevará a la fila donde está el detalle y de dirá en qué filas y columnas el texto se repite jeje
 
 Si necesitas guadar los datos como un documento excel .xlsx Presiona "Ctrl+S"
@@ -30,25 +27,15 @@ esto por si hay un apagon electrico, o corpoelec te falla, o el lago guri se sec
 
 Para cerrar con broche de oro está la función <Magia> Así es, se llama magia, por que hace magia
 
-Para tomar los datos de la página web Solo tienes que seleccionar el texto que quieres copiar
-dandole doble click si quieres tomar una palabra por ejemplo
-o triple click si quieres tomar el Texo Comleto
+Para tomar los datos de la página web:
+Solo Selecciona desde el nombre del negocio hasta su telefono o dirección y Presiona "A"
+Te pondrá contacto en la primera fila
 
-Presiona "A" y te pondrá el texto en la primera celda de la primera columna supongamos qué copias el nombre del negocio en Google Maps
-Pues el programa te limpiara los espacios que esten al principio y al final del texto, tambien los saltos de linea y te lo pondrá en la primera celda
-o si acaso presionaste otra celda te lo pondrá ahi, sea cual sea el caso NO TIENES QUE DEVOLVERTE A VER LA PESTAÑA DE CONTACTOS, no pierdas tiempo
-si vuelves a presionar "A" el texto lo pondrá en la celda de al lado, a la derecha
-
-1. Sí lo pones en la pestaña Nombres te pegara el texto como tal
-
-2. Sí lo pones en la pestaña Dirección te quitaran los 11 primeros caracteres o sea que
-si estás copiando los de Google Maps <dirección 2 puntos y un espacio> pues ahí están los 11 caracteres
-que te va a quitar, dejarás solamente la dirección limpia
-
-3. sí lo ponen en la tercera columna o sea el número de teléfono Solo te dejará los números comparados separados por espacios
+El programa te limpiara los espacios que esten al principio y al final del texto,
+tambien los saltos de linea y pondrá todos los datos
 
 Como puedes ver este programa hace que ahorre muchas horas al dia para dedicarlo a otra cosa
 a parte de esto es muy pesado el hacerlo de la otra manera
 
 No olvideas apoyar al creador del programa :D
-Tiene una gatica que alimentar (＾• ω •＾)
+Tiene una gata que alimentar (＾• ω •＾)
